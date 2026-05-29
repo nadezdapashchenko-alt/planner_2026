@@ -1,0 +1,146 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Week Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Неделя">
+      <header class="week-nav">
+        <button class="icon-btn" type="button" aria-label="Предыдущая неделя">&larr;</button>
+        <h1 class="week-title">19-25 февраля</h1>
+        <button class="icon-btn" type="button" aria-label="Следующая неделя">&rarr;</button>
+      </header>
+
+      <nav class="days-list" aria-label="Список дней недели">
+        <article class="day-card active">
+          <h2>Понедельник</h2>
+          <p class="day-date">20 февраля</p>
+          <p class="task-count">3 задачи</p>
+          <p class="task-preview">• Бриф по проекту<br />• Созвон в 11:00</p>
+        </article>
+
+        <article class="day-card">
+          <h2>Вторник</h2>
+          <p class="day-date">21 февраля</p>
+          <p class="task-count">2 задачи</p>
+          <p class="task-preview">• Дизайн-ревью<br />• Отправить отчёт</p>
+        </article>
+
+        <article class="day-card">
+          <h2>Среда</h2>
+          <p class="day-date">22 февраля</p>
+          <p class="task-count">4 задачи</p>
+          <p class="task-preview">• Подготовить демо<br />• Проверить задачи</p>
+        </article>
+
+        <article class="day-card">
+          <h2>Четверг</h2>
+          <p class="day-date">23 февраля</p>
+          <p class="task-count">1 задача</p>
+          <p class="task-preview">• План на спринт</p>
+        </article>
+
+        <article class="day-card">
+          <h2>Пятница</h2>
+          <p class="day-date">24 февраля</p>
+          <p class="task-count">2 задачи</p>
+          <p class="task-preview">• Финальное ревью<br />• Закрыть тикеты</p>
+        </article>
+
+        <article class="day-card">
+          <h2>Суббота</h2>
+          <p class="day-date">25 февраля</p>
+          <p class="task-count">1 задача</p>
+          <p class="task-preview">• Личное обучение</p>
+        </article>
+
+        <article class="day-card">
+          <h2>Воскресенье</h2>
+          <p class="day-date">26 февраля</p>
+          <p class="task-count">0 задач</p>
+          <p class="task-preview">• Нет задач</p>
+        </article>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="main-header">
+        <h2>Понедельник, 20 февраля</h2>
+      </header>
+
+      <section class="task-form-section" aria-label="Создание задачи">
+        <form class="task-form" action="#" method="post">
+          <label class="field">
+            <span class="visually-hidden">Название задачи</span>
+            <input type="text" name="taskTitle" placeholder="Название задачи" required />
+          </label>
+
+          <label class="field">
+            <span class="visually-hidden">Дата</span>
+            <input type="date" name="taskDate" required />
+          </label>
+
+          <label class="field">
+            <span class="visually-hidden">Время</span>
+            <input type="time" name="taskTime" required />
+          </label>
+
+          <label class="field">
+            <span class="visually-hidden">Приоритет</span>
+            <select name="taskPriority" required>
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </label>
+
+          <button class="add-btn" type="submit">Добавить</button>
+        </form>
+      </section>
+
+      <section class="tasks-section" aria-label="Список задач">
+        <article class="task-card priority-high">
+          <div class="task-content">
+            <h3>Подготовить презентацию для клиента</h3>
+            <p>10:30 • High priority</p>
+          </div>
+          <div class="task-actions">
+            <button type="button">Выполнить</button>
+            <button type="button">Отложить</button>
+            <button type="button" class="danger">Удалить</button>
+          </div>
+        </article>
+
+        <article class="task-card priority-medium">
+          <div class="task-content">
+            <h3>Созвон с командой продукта</h3>
+            <p>13:00 • Medium priority</p>
+          </div>
+          <div class="task-actions">
+            <button type="button">Выполнить</button>
+            <button type="button">Отложить</button>
+            <button type="button" class="danger">Удалить</button>
+          </div>
+        </article>
+
+        <article class="task-card priority-low">
+          <div class="task-content">
+            <h3>Разобрать входящие письма</h3>
+            <p>16:45 • Low priority</p>
+          </div>
+          <div class="task-actions">
+            <button type="button">Выполнить</button>
+            <button type="button">Отложить</button>
+            <button type="button" class="danger">Удалить</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
